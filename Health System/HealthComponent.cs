@@ -76,7 +76,10 @@ namespace HealthSystem
         /// <param name="incomingDamage"></param>
         public virtual void DoDamage(DamageInfo incomingDamage)
         {
-            if (_invulnerable || IsDead)
+            if (IsDead)
+                return;
+
+            if(_invulnerable && !incomingDamage.ignoreInvulnerability)
                 return;
 
             if (Shield.ShieldAmount > 0)

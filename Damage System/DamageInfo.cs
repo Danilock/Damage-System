@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DamageSystem
+namespace HealthSystem
 {
     /// <summary>
     /// Contains information about a damage Transmitter.
@@ -12,7 +12,7 @@ namespace DamageSystem
         /// <summary>
         /// Who is causing this damage.
         /// </summary>
-        public Damageable Transmitter;
+        public HealthComponent Transmitter;
 
         public float Damage;
         public bool IgnoreInvulnerability = false;
@@ -22,14 +22,14 @@ namespace DamageSystem
         {
         }
 
-        public DamageInfo(Damageable transmitter, float damage, bool ignoreInvulnerability)
+        public DamageInfo(HealthComponent transmitter, float damage, bool ignoreInvulnerability)
         {
             this.Transmitter = transmitter;
             this.Damage = damage;
             this.IgnoreInvulnerability = ignoreInvulnerability;
         }
 
-        public DamageInfo(Damageable transmitter, float damage, bool ignoreInvulnerability,
+        public DamageInfo(HealthComponent transmitter, float damage, bool ignoreInvulnerability,
             bool ignoreElement)
         {
             this.Transmitter = transmitter;

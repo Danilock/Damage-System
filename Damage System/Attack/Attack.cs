@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
-namespace DamageSystem.Attacks
+namespace HealthSystem.Attacks
 {
     /// <summary>
     /// Base class for attacks.
@@ -35,13 +35,13 @@ namespace DamageSystem.Attacks
         /// <summary>
         /// Damageable owning this Attack
         /// </summary>
-        public Damageable Owner;
+        public HealthComponent Owner;
         public abstract void DoAttack();
 
         protected virtual void Awake()
         {
             if (Owner == null)
-                Owner = GetComponent<Damageable>();
+                Owner = GetComponent<HealthComponent>();
         }
 
         public void SetDamage(float amount) => DamageAmount = amount;

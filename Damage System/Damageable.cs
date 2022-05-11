@@ -6,12 +6,12 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using System.Linq;
 
-namespace DamageSystem
+namespace HealthSystem
 {
     /// <summary>
     /// Representation of a damageable entity in game.
     /// </summary>
-    public class Damageable : MonoBehaviour
+    public class HealthComponent : MonoBehaviour
     {
         #region Protected/Private Fields
         //Health

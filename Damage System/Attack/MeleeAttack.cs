@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DamageSystem.Attacks
+namespace HealthSystem.Attacks
 {
     public class MeleeAttack : Attack
     {
@@ -44,7 +44,7 @@ namespace DamageSystem.Attacks
             //Going through all damageables detected
             foreach (Collider2D damageable in damageableHit)
             {
-                Damageable dmg = damageable.GetComponent<Damageable>();
+                HealthComponent dmg = damageable.GetComponent<HealthComponent>();
                 
                 if(dmg == null)
                     return;

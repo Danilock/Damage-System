@@ -4,11 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using  System.Linq;
-using System.Runtime.CompilerServices;
-using Sirenix.OdinInspector;
+using System.Linq;
 
-namespace Game.DamageSystem
+namespace DamageSystem
 {
     /// <summary>
     /// Representation of a damageable entity in game.
@@ -17,10 +15,8 @@ namespace Game.DamageSystem
     {
         #region Protected/Private Fields
         //Health
-        [FoldoutGroup("Health")]
         [SerializeField] protected float _startHealth = 1;
-        [ReadOnly, FoldoutGroup("Health")]
-        [SerializeField, ProgressBar("_startHealth", "_currentHealth", ColorGetter = "GetColorBar")] protected float _currentHealth = 1;
+        [SerializeField] protected float _currentHealth = 1;
 
         private Color GetColorBar
         {
@@ -31,9 +27,7 @@ namespace Game.DamageSystem
             }
         }
         
-        [FoldoutGroup("Shield")]
         public Shield Shield = new Shield();
-        [FoldoutGroup("Invulnerability")]
         [SerializeField] private bool _invulnerable = false;
 
         public bool IsDead

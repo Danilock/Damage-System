@@ -1,13 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Sirenix.OdinInspector;
 using Unity.Profiling;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
-namespace Game.DamageSystem.Attacks
+namespace DamageSystem.Attacks
 {
     /// <summary>
     /// Base class for attacks.
@@ -16,24 +15,18 @@ namespace Game.DamageSystem.Attacks
     {
         #region Attack Settings
         [FormerlySerializedAs("Point")]
-        [FoldoutGroup("Attack Settings")] 
+        [Header("Attack Settings")] 
         
         [SerializeField] private Transform _point;
 
         protected Transform Point => _point == null ? transform : _point;
-
-        [FormerlySerializedAs("Element")] 
-        [FoldoutGroup("Attack Settings")]
-
         public bool IgnoreTargetInvulnerability = false;
 
         #endregion
         
         #region Damage Settings
-        [FoldoutGroup("Damage Settings")]
+        [Header("Damage Settings")]
         [SerializeField] protected float DamageAmount;
-        
-        [FoldoutGroup("Damage Settings")]
         [SerializeField] protected LayerMask Layers;
         #endregion
 
@@ -42,7 +35,6 @@ namespace Game.DamageSystem.Attacks
         /// <summary>
         /// Damageable owning this Attack
         /// </summary>
-        [FoldoutGroup("Damage Settings")]
         public Damageable Owner;
         public abstract void DoAttack();
 

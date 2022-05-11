@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace Game.DamageSystem
+namespace DamageSystem
 {
     [System.Serializable]
     public class Shield

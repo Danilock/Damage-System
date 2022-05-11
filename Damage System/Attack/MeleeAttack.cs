@@ -1,14 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Game.DamageSystem.Attacks
+namespace DamageSystem.Attacks
 {
     public class MeleeAttack : Attack
     {
-        [FoldoutGroup("Melee Attack Settings")] 
         [SerializeField] private Vector2 DamageAreaSize;
         
         #region Attack Point Variables
@@ -17,8 +15,6 @@ namespace Game.DamageSystem.Attacks
             Offset,
             Target
         }
-
-        [FoldoutGroup("Melee Attack Settings")] 
         [SerializeField] private FocusOn _focusOn;
 
         private Vector2 _determinePoint
@@ -33,12 +29,8 @@ namespace Game.DamageSystem.Attacks
                 }
             }
         }
-
-        [FoldoutGroup("Melee Attack Settings")] 
         [SerializeField] private Vector2 _offset;
         #endregion
-        
-        [FoldoutGroup("Gizmos")] 
         [SerializeField] private Color _gizmoColor;
         
         /// <summary>

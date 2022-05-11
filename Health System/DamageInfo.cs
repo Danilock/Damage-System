@@ -16,7 +16,6 @@ namespace HealthSystem
 
         public float Damage;
         public bool IgnoreInvulnerability = false;
-        public bool IgnoreElement = false;
 
         public DamageInfo()
         {

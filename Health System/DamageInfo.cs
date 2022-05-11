@@ -28,14 +28,5 @@ namespace HealthSystem
             this.Damage = damage;
             this.IgnoreInvulnerability = ignoreInvulnerability;
         }
-
-        public DamageInfo(HealthComponent transmitter, float damage, bool ignoreInvulnerability,
-            bool ignoreElement)
-        {
-            this.Transmitter = transmitter;
-            this.Damage = damage;
-            this.IgnoreInvulnerability = ignoreInvulnerability;
-            this.IgnoreElement = ignoreElement;
-        }
     }
 }

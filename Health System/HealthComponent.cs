@@ -79,7 +79,7 @@ namespace HealthSystem
             if (IsDead)
                 return;
 
-            if(_invulnerable && !incomingDamage.ignoreInvulnerability)
+            if(_invulnerable && !incomingDamage.IgnoreInvulnerability)
                 return;
 
             if (Shield.ShieldAmount > 0)
